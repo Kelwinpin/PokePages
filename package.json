@@ -12,7 +12,7 @@
     "test:dev": "vitest",
     "test:ui": "vitest --ui",
     "test:cov": "vitest run --coverage",
-    "test:report": "vitest run --coverage && npx http-server -c-1 -iop 3002 coverage",    
+    "test:report": "vitest run --coverage && npx http-server -c-1 -iop 3002 coverage",
     "ci:lint": "eslint --max-warnings 0 -ext .ts,.tsx,.json src/"
   },
   "dependencies": {
@@ -20,7 +20,8 @@
     "@emotion/styled": "^11.11.5",
     "axios": "^1.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

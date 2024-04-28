@@ -28,7 +28,7 @@ export const Home = () => {
         <div>
             <h1>PokePages</h1>
             {pokemon &&
-             <Card id={pokemon.id} name={pokemon.name} sprites={pokemon.sprites}/>
+             <Card id={pokemon.id} name={pokemon.name} sprites={pokemon.sprites} />
             }            
             <Button onClick={handlePrevious}>{"<"}</Button>
             <Button onClick={handleNext}>{">"}</Button>

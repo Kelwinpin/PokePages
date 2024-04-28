@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-export async function searchPokemon(params:string): Promise<Pokemon>{
+export async function searchPokemon(params:string | number): Promise<Pokemon>{
         try {
             const response: AxiosResponse<any, any> = await axios.get(`https://pokeapi.co/api/v2/pokemon/${params}`);
             const pokemonData: Pokemon = response.data;

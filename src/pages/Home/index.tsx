@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Card } from "../../components/Card";
 import { searchPokemon } from "../../utils/api";
 import Button from "../../components/Button";
+import { Container, Title } from "./styles";
 
 export const Home = () => {
     const [pokemon, setPokemon] = useState<Pokemon | undefined>(undefined);
@@ -25,13 +26,16 @@ export const Home = () => {
     }, [numberInPokedex]);
 
     return(
-        <div>
-            <h1>PokePages</h1>
+        <Container>
+            <Title>PokéPages</Title>
             {pokemon &&
              <Card id={pokemon.id} name={pokemon.name} sprites={pokemon.sprites} />
-            }            
-            <Button onClick={handlePrevious}>{"<"}</Button>
-            <Button onClick={handleNext}>{">"}</Button>
-        </div>
+            } 
+            <div>         
+                <Button onClick={handlePrevious}>{"<"}</Button>
+                <Button>{"Info"}</Button>
+                <Button onClick={handleNext}>{">"}</Button>
+            </div>
+        </Container>  
     );
 }
